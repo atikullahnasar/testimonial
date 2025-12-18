@@ -5,6 +5,13 @@ Installation & Setup
 
 Follow the steps below to install and configure the package in your Laravel application:
 
+must need to be have any kinds of authentication system.This package is not published on Packagist yet, so you need to add the GitHub repository manually to your main project’s composer.json file.
+
+Add the following inside composer.json:
+"repositories": [ { "type": "vcs", "url": "https://github.com/atikullahnasar/testimonial" } ],
+
+Save the file after adding this.
+
 Step 1: Install the Package
 composer require atikullahnasar/testimonial:dev-main
 
