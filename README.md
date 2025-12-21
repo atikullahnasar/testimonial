@@ -1,9 +1,4 @@
 
-
-Of course! Here is a well-structured and professional README file for your Laravel Testimonial package.
-
-***
-
 # Laravel Testimonial Package
 
 A simple and customizable Laravel package that provides testimonial management with ready-to-use migrations and routes.
