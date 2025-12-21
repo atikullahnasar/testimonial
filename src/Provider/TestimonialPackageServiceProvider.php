@@ -13,11 +13,21 @@ class TestimonialPackageServiceProvider extends ServiceProvider
 
     public function boot()
     {
+
+        // Publish config
+        $this->publishes([
+            __DIR__ . '/../Config/testimonial.php' => config_path('testimonial.php'),
+        ], 'testimonial-config');
+
+        // Load views based on config
+        $layout = config('testimonial.layout', 'bootstrap');
+
+        // Load views
+        $this->loadViewsFrom(__DIR__ . '/../Resources/views/' . $layout, 'testimonial');
+
         // Load routes
         $this->loadRoutesFrom(__DIR__ . '/../Routes/web.php');
 
-        // Load views
-        $this->loadViewsFrom(__DIR__ . '/../Resources/views', 'testimonial');
 
         // Publish migrations
         $this->publishes([__DIR__ . '/../Database/migrations' => database_path('migrations'),
