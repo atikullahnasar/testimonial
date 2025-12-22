@@ -6,8 +6,9 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <link rel="stylesheet" href="https://cdn.datatables.net/2.0.8/css/dataTables.dataTables.css" />
 
-    <!-- Tailwind CDN (for testing/demo) -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- CSS -->
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
+
 </head>
 <body class="bg-gray-100 p-6">
 
